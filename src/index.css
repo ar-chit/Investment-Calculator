@@ -16,15 +16,16 @@ body {
 
 #header {
   text-align: center;
-  margin: 3rem auto;
+  margin: auto;
 }
 
 
 #header img {
-  width: 5rem;
-  height: 5rem;
+  width: 18rem;
+  height: 18rem;
   object-fit: contain;
   background-color: transparent;
+  margin-bottom: -3rem;
 }
 
 #header h1 {
@@ -71,17 +72,25 @@ body {
   table-layout: fixed;
   border-spacing: 1rem;
   text-align: right;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  overflow: auto;
+  /* Enable horizontal scrolling if needed */
 }
 
 #result thead {
   font-size: 0.7rem;
   color: #83e6c0;
+  white-space: nowrap;
+  /* Prevent text from wrapping in the header */
 }
 
 #result tbody {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 0.85rem;
   color: #c2e9e0;
+  white-space: nowrap;
+  /* Prevent text from wrapping in the body */
 }
 
 .center {
