@@ -35,12 +35,12 @@ export function calculateInvestmentResults({ monthlyInvestment, expectedReturn, 
       totalValue: totalValue
     })
     // Display data for the current year
-    console.log(`Year ${year}:`);
-    console.log("  Invested amount: ₹", investedAmount);
-    console.log("  Gain per annum: ₹", gainPerAnnum);
-    console.log("  Est. returns: ₹", estimatedReturns);
-    console.log("  Total Value: ₹", totalValue);
-    console.log("--------------");
+    // console.log(`Year ${year}:`);
+    // console.log("  Invested amount: ₹", investedAmount);
+    // console.log("  Gain per annum: ₹", gainPerAnnum);
+    // console.log("  Est. returns: ₹", estimatedReturns);
+    // console.log("  Total Value: ₹", totalValue);
+    // console.log("--------------");
 
     previousYearGain = currentYearGain;
   }
