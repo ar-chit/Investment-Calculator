@@ -1,10 +1,9 @@
 export default function UserInput({ userInput, onChange }) {
     const handleInputChange = (field, value) => {
-        // Remove non-numeric characters from the input value
-        const numericValue = value.replace(/[^0-9]/g, '');
+        // Check if the input is zero, replace it with the new input
+        const newValue = value === '0' ? value : parseFloat(value);
 
-        // Update the state with the cleaned numeric value
-        onChange(field, numericValue);
+        onChange(field, newValue);
     };
 
     return (
@@ -13,7 +12,7 @@ export default function UserInput({ userInput, onChange }) {
                 <p>
                     <label>Monthly S.I.P Amount</label>
                     <input
-                        type="text"
+                        type="number"
                         required
                         value={userInput.monthlyInvestment}
                         onChange={(event) =>
@@ -26,7 +25,7 @@ export default function UserInput({ userInput, onChange }) {
                 <p>
                     <label>Expected Return (% p.a)</label>
                     <input
-                        type="text"
+                        type="number"
                         required
                         value={userInput.expectedReturn}
                         onChange={(event) =>
@@ -37,7 +36,7 @@ export default function UserInput({ userInput, onChange }) {
                 <p>
                     <label>Duration (year)</label>
                     <input
-                        type="text"
+                        type="number"
                         required
                         value={userInput.duration}
                         onChange={(event) =>
