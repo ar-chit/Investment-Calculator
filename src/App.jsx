@@ -19,12 +19,12 @@ function App() {
     })
   }
 
-  const inputIsValid = userInput.duration > 0;
+  const inputIsValid = userInput.duration > 0 && userInput.monthlyInvestment > 0 && userInput.expectedReturn > 0;
 
   return (
     <>
       <UserInput userInput={userInput} onChange={handleChange} />
-      {!inputIsValid && <p className="center">Please enter a valid duration</p>}
+      {!inputIsValid && <p className="center">Please enter a valid data</p>}
       {inputIsValid && <Results input={userInput} />}
     </>
   )
