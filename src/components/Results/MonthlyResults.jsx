@@ -1,7 +1,7 @@
-import { calculateInvestmentResults, formatter } from "../../util/investment"
+import { calculateMonthlyInvestmentResults, formatter } from "../../util/investment"
 
-export default function Results({ input }) {
-    const results = calculateInvestmentResults(input);
+export default function MonthlyResults({ input }) {
+    const results = calculateMonthlyInvestmentResults(input);
 
     return (
         <table id="result">

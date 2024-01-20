@@ -1,8 +1,6 @@
-export default function UserInput({ userInput, onChange }) {
+export default function UserInputLumpsum({ userInputLumpsum, onChange }) {
     const handleInputChange = (field, value) => {
-        // Check if the input is zero, replace it with the new input
         const newValue = value === '0' ? value : parseFloat(value);
-
         onChange(field, newValue);
     };
 
@@ -10,13 +8,13 @@ export default function UserInput({ userInput, onChange }) {
         <section id="user-input">
             <div className="input-group">
                 <p>
-                    <label>Monthly S.I.P Amount</label>
+                    <label>Lumpsum Amount</label>
                     <input
                         type="number"
                         required
-                        value={userInput.monthlyInvestment}
+                        value={userInputLumpsum.lumpsumAmount}
                         onChange={(event) =>
-                            handleInputChange('monthlyInvestment', event.target.value)
+                            handleInputChange('lumpsumAmount', event.target.value)
                         }
                     />
                 </p>
@@ -27,7 +25,7 @@ export default function UserInput({ userInput, onChange }) {
                     <input
                         type="number"
                         required
-                        value={userInput.expectedReturn}
+                        value={userInputLumpsum.expectedReturn}
                         onChange={(event) =>
                             handleInputChange('expectedReturn', event.target.value)
                         }
@@ -38,7 +36,7 @@ export default function UserInput({ userInput, onChange }) {
                     <input
                         type="number"
                         required
-                        value={userInput.duration}
+                        value={userInputLumpsum.duration}
                         onChange={(event) =>
                             handleInputChange('duration', event.target.value)
                         }
